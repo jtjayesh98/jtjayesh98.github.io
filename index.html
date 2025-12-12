@@ -1,19 +1,22 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Jayesh Tripathi — Researcher & Engineer</title>
-  <meta name="description" content="Jayesh Tripathi — Researcher in distribution shifts and AI robustness. Portfolio, publications, and contact." />
-  <link rel="stylesheet" href="./style.css">
+  <title>Jayesh Tripathi — Distribution Shifts & AI Robustness</title>
+  <meta name="description" content="Jayesh Tripathi — Project Scientist at IIT Delhi. Research on distribution shifts, remote sensing and robust ML systems. Portfolio, publications, and contact." />
+  <meta name="theme-color" content="#0b7285">
+  <link rel="icon" href="/assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="container">
       <h1 class="logo">Jayesh Tripathi</h1>
-      <nav class="nav">
+      <nav class="nav" role="navigation" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
@@ -23,67 +26,97 @@
   </header>
 
   <main>
-    <section id="hero" class="hero">
+    <section id="hero" class="hero" aria-label="Introduction">
       <div class="container hero-grid">
         <div>
+          <p class="eyebrow">Project Scientist — IIT Delhi</p>
           <h2>Hi — I’m Jayesh.</h2>
-          <p class="lead">Researcher in distribution shifts & AI robustness. I build methods to detect and adapt models to changing data.</p>
+          <p class="lead">Distribution Shifts and AI/ML Model Robustness. <br> I build methods to detect, diagnose, and adapt models when data changes.</p>
           <p>
             <a class="btn" href="assets/JayeshTripathi_CV.pdf" download>Download CV</a>
             <a class="btn btn-outline" href="#projects">View Projects</a>
           </p>
+          <p class="meta-links">
+            <a href="https://github.com/jtjayesh98" aria-label="GitHub">GitHub</a> ·
+            <a href="https://scholar.google.com/citations?user=id7UeTkAAAAJ&hl=en" aria-label="Google Scholar">Scholar</a> ·
+            <a href="https://www.linkedin.com/in/jayesh-tripathi/" aria-label="LinkedIn">LinkedIn</a>
+          </p>
         </div>
-        <div class="headshot">
-          <img src="assets/headshot.jpg" alt="Jayesh Tripathi headshot">
+        <div class="headshot" aria-hidden="false">
+          <img src="assets/headshot.jpg" alt="Headshot of Jayesh Tripathi">
         </div>
       </div>
     </section>
 
-    <section id="about" class="container about">
+    <section id="about" class="container about" aria-label="About">
       <h3>About</h3>
-      <p>I am a project scientist with experience in satellite imagery, distribution shift detection, and reproducible ML systems. I collaborate with academic and industry teams to make models robust to real-world change.</p>
+      <p>I am a Project Scientist at IIT Delhi working on distribution-shift detection, robust machine learning for remote sensing, and reproducible evaluation pipelines in applied fields.</p>
     </section>
 
-    <section id="projects" class="container projects">
+    <!-- Projects: descriptions built from your CV (papers, datasets, and project work). -->
+    <section id="projects" class="container projects" aria-label="Projects">
       <h3>Selected Projects</h3>
       <ul class="cards">
-        <li class="card"><h4>ShiftSeer</h4><p>Pipeline for detecting distribution shifts in remote-sensing data.</p></li>
-        <li class="card"><h4>SafePatch</h4><p>Patch-based evaluation to test model robustness under sensor change.</p></li>
+
+        <!-- Cybersecurity -->
+        <li class="card">
+          <h4>Cybersecurity — Explainable Drift Detection & Early Retrain
+            <span class="status-badge">Paper (DIMVA 2025)</span>
+          </h4>
+          <p>
+            Methodologies to detect concept drift in malware/security pipelines, provide human-interpretable explanations for drift sources, and trigger targeted retraining to restore performance. Designed experiments on Android malware corpora (DREBIN, AndroZoo) with reproducible evaluation.
+          </p>
+          <p class="small">
+            <strong>Key outputs:</strong> DIMVA 2025 paper describing drift-detection + explanation pipeline and experiments showing improved sustained model performance.
+          </p>
+          <p style="margin-top:10px"><a href="https://link.springer.com/chapter/10.1007/978-3-031-97623-0_1" class="btn-outline">Paper</a></p>
+        </li>
+
+        <!-- Disaster Robotics / Damage Assessment -->
+        <li class="card">
+          <h4>Disaster Robotics — Damage Assessment
+            <span class="status-badge">Paper (FAccT 2025)</span>
+          </h4>
+          <p>
+            End-to-end pipelines for post-disaster imagery: assembled and annotated a NADIR satellite building-damage dataset (~10k buildings), ran community annotation campaigns, and published the dataset to accelerate research on building damage assessment.
+          </p>
+          <p class="small">
+            <strong>Key outputs:</strong> ACM FAccT 2025 dataset publication, Hugging Face dataset release, Labelbox annotation workflow and community workshops.
+          </p>
+          <p style="margin-top:10px"><a href="https://dl.acm.org/doi/full/10.1145/3715275.3732135" class="btn-outline">Paper</a></p>
+        </li>
+
+        <!-- Climate Tech / Forest Cover -->
+        <li class="card">
+          <h4>Climate Tech — Forest Cover Modelling
+          </h4>
+          <p>
+            Temporal forest-cover and biomass estimation pipelines for carbon-credit estimation. Built satellite-based temporal models and validated them with field surveys across multiple village sites (Dhenkanal, Odisha). Working on integration into operational monitoring stacks.
+          </p>
+        </li>
+
       </ul>
+
     </section>
 
-    <section id="publications" class="container publications">
+    <section id="publications" class="container publications" aria-label="Publications">
       <h3>Publications</h3>
       <ol>
-        <li>Jayesh Tripathi et al., “Detecting Distribution Shifts for Disaster Response”, FAccT 2025.</li>
-        <li>Jayesh Tripathi et al., “Pipeline for Shift Detection in Cybersecurity”, DIMVA 2025.</li>
+        <li><b>Jayesh Tripathi</b>, Heitor Gomes, and Marcus Botacin, “Towards Explainable Drift Detection and Early Retrain in ML-Based Malware Detection Pipelines”, DIMVA 2025.</li>
+        <li>Thomas Manzini, Priyankari Perali, <b>Jayesh Tripathi</b>, and Robin R. Murphy, “Now you see it, Now you don’t: Damage Label Agreement in Drone & Satellite Post-Disaster Imagery”, FAccT 2025.</li>
       </ol>
     </section>
 
-    <section id="contact" class="container contact">
+    <section id="contact" class="container contact" aria-label="Contact">
       <h3>Contact</h3>
-      <p>Email: <a href="mailto:jt.jayesh98@gmail.com">jt.jayesh98@gmail.com</a></p>
-      <!-- Optional simple contact form using formspree/netlify/etc. -->
-      <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label>
-          <span>Name</span>
-          <input type="text" name="name" required>
-        </label>
-        <label>
-          <span>Message</span>
-          <textarea name="message" rows="4" required></textarea>
-        </label>
-        <button type="submit" class="btn">Send</button>
-      </form>
-    </section>
-  </main>
+      <p>Email: jt (dot) jayesh98 (at) gmail (dot) com</a></p>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <p>© <span id="year"></span> Jayesh Tripathi — <a href="https://github.com/your-username">GitHub</a> · <a href="https://scholar.google.com">Scholar</a></p>
+      <p>© <span id="year"></span> Jayesh Tripathi — Project Scientist, IIT Delhi · <a href="https://github.com/jtjayesh98">GitHub</a></p>
     </div>
   </footer>
 
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
